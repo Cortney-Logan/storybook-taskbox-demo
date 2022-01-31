@@ -22,7 +22,7 @@ export default {
     // can also be used to wrap stories in 'providers' - a library that sets some context
     componentWrapperDecorator(story => `<div style="margin: 3em">${story}</div>`),
   ],
-  title: 'TaskList',
+  title: 'PureTaskList',
 } as Meta;
 
 const Template: Story = args => ({
