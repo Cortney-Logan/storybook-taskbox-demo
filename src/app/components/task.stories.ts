@@ -19,7 +19,7 @@ export default {
     }),
   ],
   title: 'Task',
-  excludedStories: /.*Data$/,
+  excludeStories: /.*Data$/,
 } as Meta;
 
 // action() allows us to create a callback that appears in the action pannel of the storybook UI when clicked
