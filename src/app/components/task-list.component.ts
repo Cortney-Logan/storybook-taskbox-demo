@@ -1,31 +1,29 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Select, Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
 import { Task } from '../models/task.model';
+import { ArchiveTask, PinTask, TasksState } from '../state/task.state';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
 })
 export class TaskListComponent {
-  tasksInOrder: Task[] = [];
+  @Select(TasksState.getAllTasks) tasks$: Observable<Task[]>;
 
-  /** Check if it's in loading state */
-  @Input() loading = false;
+  constructor(private store: Store) {}
 
-  @Input()
-  set tasks(arr: Task[]){
-    this.tasksInOrder = [
-      ...arr.filter(t => t.state === 'TASK_PINNED'),
-      ...arr.filter(t => t.state !== 'TASK_PINNED')
-    ];
+  /**
+   * Component method to trigger the archiveTask event
+   */
+  archiveTask(id: string): void {
+    this.store.dispatch(new ArchiveTask(id));
   }
 
-  /** Event to change the task to pinned */
-  // tslint:disable-next-line: no-output-on-prefix
-  @Output() onPinTask = new EventEmitter<Event>();
-
-  /** Event to change the task to archived */
-  // tslint:disable-next-line: no-output-on-prefix
-  @Output() onArchiveTask = new EventEmitter<Event>();
-
-
+  /**
+   * Component method to trigger the pinTask event
+   */
+  pinTask(id: string): void {
+    this.store.dispatch(new PinTask(id));
+  }
 }

@@ -5,16 +5,16 @@ import {
   moduleMetadata,
   Story
 } from '@storybook/angular';
-import { TaskListComponent } from './task-list.component';
+import { PureTaskListComponent } from './pure-task-list.component';
 import { TaskComponent } from './task.component';
 import * as TaskStories from './task.stories';
 
 export default {
-  component: TaskListComponent,
+  component: PureTaskListComponent,
   decorators: [
     moduleMetadata({
       // Imports both components to allow component composition with Storybook
-      declarations: [TaskListComponent, TaskComponent],
+      declarations: [PureTaskListComponent, TaskComponent],
       imports: [CommonModule],
     }),
     // Wraps our stories with a decorator - in this case added padding around the rendered component

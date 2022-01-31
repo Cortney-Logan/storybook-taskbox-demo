@@ -1,13 +1,13 @@
 import { render } from '@testing-library/angular';
-import { TaskListComponent } from './task-list.component';
-import { Empty, WithPinnedTasks } from './task-list.stories';
+import { PureTaskListComponent } from './pure-task-list.component';
+import { Empty, WithPinnedTasks } from './pure-task-list.stories';
 import { TaskComponent } from './task.component';
 
 describe('TaskList component', () => {
   it('renders pinned tasks at the start of the list', async () => {
     const mockedActions = jest.fn();
 
-    const tree = await render(TaskListComponent, {
+    const tree = await render(PureTaskListComponent, {
       declarations: [TaskComponent],
       componentProperties: {
         ...WithPinnedTasks.args,
@@ -27,7 +27,7 @@ describe('TaskList component', () => {
   it('renders no tasks message when there are no tasks', async () => {
     const mockedActions = jest.fn();
 
-    const tree = await render(TaskListComponent, {
+    const tree = await render(PureTaskListComponent, {
       declarations: [TaskComponent],
       componentProperties: {
         ...Empty.args,
