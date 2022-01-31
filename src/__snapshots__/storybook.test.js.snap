@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Task Actions Data 1`] = `
+<storybook-wrapper>
+  <app-task>
+    <div
+      class="list-item"
+    >
+      <label
+        class="checkbox"
+      >
+        <input
+          disabled="true"
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          aria-label="archiveTask-"
+          class="checkbox-custom"
+        />
+      </label>
+      <div
+        class="title"
+      >
+        <input
+          placeholder="Input title"
+          readonly="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="actions"
+      >
+        <a>
+          <span
+            aria-label="pinTask-"
+            class="icon-star"
+          />
+        </a>
+        
+      </div>
+    </div>
+  </app-task>
+</storybook-wrapper>
+`;
+
+exports[`Storyshots Task Archived 1`] = `
+<storybook-wrapper>
+  <app-task
+    ng-reflect-task="[object Object]"
+  >
+    <div
+      class="TASK_ARCHIVED list-item"
+    >
+      <label
+        class="checkbox"
+      >
+        <input
+          checked=""
+          disabled="true"
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          aria-label="archiveTask-1"
+          class="checkbox-custom"
+        />
+      </label>
+      <div
+        class="title"
+      >
+        <input
+          placeholder="Input title"
+          readonly="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="actions"
+      >
+        
+      </div>
+    </div>
+  </app-task>
+</storybook-wrapper>
+`;
+
+exports[`Storyshots Task Default 1`] = `
+<storybook-wrapper>
+  <app-task
+    ng-reflect-task="[object Object]"
+  >
+    <div
+      class="TASK_INBOX list-item"
+    >
+      <label
+        class="checkbox"
+      >
+        <input
+          disabled="true"
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          aria-label="archiveTask-1"
+          class="checkbox-custom"
+        />
+      </label>
+      <div
+        class="title"
+      >
+        <input
+          placeholder="Input title"
+          readonly="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="actions"
+      >
+        <a>
+          <span
+            aria-label="pinTask-1"
+            class="icon-star"
+          />
+        </a>
+        
+      </div>
+    </div>
+  </app-task>
+</storybook-wrapper>
+`;
+
+exports[`Storyshots Task Pinned 1`] = `
+<storybook-wrapper>
+  <app-task
+    ng-reflect-task="[object Object]"
+  >
+    <div
+      class="TASK_PINNED list-item"
+    >
+      <label
+        class="checkbox"
+      >
+        <input
+          disabled="true"
+          name="checked"
+          type="checkbox"
+        />
+        <span
+          aria-label="archiveTask-1"
+          class="checkbox-custom"
+        />
+      </label>
+      <div
+        class="title"
+      >
+        <input
+          placeholder="Input title"
+          readonly="true"
+          type="text"
+        />
+      </div>
+      <div
+        class="actions"
+      >
+        <a>
+          <span
+            aria-label="pinTask-1"
+            class="icon-star"
+          />
+        </a>
+        
+      </div>
+    </div>
+  </app-task>
+</storybook-wrapper>
+`;
