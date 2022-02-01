@@ -420,7 +420,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-7d6eb3e35025a8773b9d6b376ab02654",
+            "id": "component-AppComponent-fb56d3e0a3e4e853aa7f7eccc1304130",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -428,9 +428,7 @@
             "outputs": [],
             "providers": [],
             "selector": "app-root",
-            "styleUrls": [
-                "./app.component.css"
-            ],
+            "styleUrls": [],
             "styles": [],
             "templateUrl": [
                 "./app.component.html"
@@ -445,7 +443,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 9
+                    "line": 8
                 }
             ],
             "methodsClass": [],
@@ -454,14 +452,9 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  title = 'taskbox';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n})\nexport class AppComponent {\n  title = 'taskbox';\n}\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./app.component.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
             "templateData": "<app-inbox-screen></app-inbox-screen>\n"
         },
@@ -750,7 +743,7 @@
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
-            "templateData": "<div *ngIf=\"error\" class=\"page lists-show\">\r\n  <div class=\"wrapper-message\">\r\n    <span class=\"icon-face-sad\"></span>\r\n    <div class=\"title-message\">Oh no!</div>\r\n    <div class=\"subtitle-message\">Something went wrong</div>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"!error\" class=\"page lists-show\">\r\n  <nav>\r\n    <h1 class=\"title-page\"><span class=\"title-wrapper\">Taskbox</span></h1>\r\n  </nav>\r\n  <app-task-list></app-task-list>\r\n</div>\r\n"
+            "templateData": "    <div *ngIf=\"error\" class=\"page lists-show\">\r\n      <div class=\"wrapper-message\">\r\n        <span class=\"icon-face-sad\"></span>\r\n        <div class=\"title-message\">Oh no!</div>\r\n        <div class=\"subtitle-message\">Something went wrong</div>\r\n      </div>\r\n    </div>\r\n\r\n    <div *ngIf=\"!error\" class=\"page lists-show\">\r\n      <nav>\r\n        <h1 class=\"title-page\">\r\n          <span class=\"title-wrapper\">Taskbox</span>\r\n        </h1>\r\n      </nav>\r\n      <app-task-list></app-task-list>\r\n    </div>\r\n"
         },
         {
             "name": "PureTaskListComponent",
@@ -1198,6 +1191,14 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/pure-task-list.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
@@ -1241,6 +1242,14 @@
                 "file": "src/environments/environment.ts",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "Error",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Large",
@@ -1358,6 +1367,14 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "Story",
+                "defaultValue": "args => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/pure-task-list.stories.ts",
                 "type": "Story",
                 "defaultValue": "args => ({\r\n  props: {\r\n    ...args,\r\n    onPinTask: TaskStories.actionsData.onPinTask,\r\n    onArchiveTask: TaskStories.actionsData.onArchiveTask,\r\n  },\r\n})"
@@ -1441,6 +1458,32 @@
                     "file": "src/app/components/task.stories.ts",
                     "type": "Story",
                     "defaultValue": "(args) => ({\r\n  props: {\r\n    ...args,\r\n    onPinTask: actionsData.onPinTask,\r\n    onArchiveTask: actionsData.onArchiveTask,\r\n  },\r\n})"
+                }
+            ],
+            "src/app/components/pure-inbox-screen.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pure-inbox-screen.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Error",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pure-inbox-screen.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/pure-inbox-screen.stories.ts",
+                    "type": "Story",
+                    "defaultValue": "args => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/components/pure-task-list.stories.ts": [
@@ -1616,7 +1659,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1644,6 +1687,36 @@
                 "name": "PureInboxScreenComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Error",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/pure-inbox-screen.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

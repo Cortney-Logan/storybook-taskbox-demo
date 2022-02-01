@@ -6,4 +6,4 @@ describe('App', () => {
     const { getByText } = await render(AppComponent);
     expect(getByText('Welcome'));
   });
-})
+});
